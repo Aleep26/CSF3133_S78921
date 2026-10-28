@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Course Feedback</title>
+</head>
+<body>
+
+    <!-- ERROR IDENTIFICATION LIST (Part 1, Item 2) -->
+    <!--
+        Error 1 (Line 9): Invalid closing tag </head> inside <body>.
+        Error 2 (Line 20): Used <td> instead of <th> for the table header cell "Rating".
+        Error 3 (Line 28): Incorrect colspan="3" on a 3-column table causing layout distortion.
+        Error 4 (Line 42, 44): Radio buttons have different 'name' attributes ("good" and "poor") instead of sharing the same name group.
+        Error 5 (Line 43): Label 'for="good"' does not match the radio button id properly.
+        Error 6 (Line 46): Checkbox id="lab" does not match label for="labs".
+        Error 7 (Line 48): Form tag is misspelled as <from> instead of <form>.
+    -->
+
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+    
+    <nav>
+        <a href="#results">Results</a> | <a href="#form">Feedback Form</a> | <a href="#comments">Student Comments</a>
+    </nav>
+
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tables and Forms</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.0</td>
+                </tr>
+                <!-- Table Extension -->
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>4.7</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>4.9</td>
+                </tr>
+                <!-- Final row "Average Rating" -->
+                <tr>
+                    <td colspan="2">Average Rating</td>
+                    <td>4.46</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+
+            <!-- Form Extension: E-mail input with matching label -->
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label>Overall rating:</label><br>
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label><br>
+            
+            <!-- Form Extension: Third radio option "Average" -->
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label><br>
+            
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label><br>
+
+            <!-- Form Extension: At least 3 checkboxes -->
+            <label>Topics I want more practice on:</label><br>
+            <input type="checkbox" id="lab1" name="lab[]" value="html">
+            <label for="lab1">Basic HTML Tags</label><br>
+            <input type="checkbox" id="lab2" name="lab[]" value="tables">
+            <label for="lab2">Tables &amp; Spans</label><br>
+            <input type="checkbox" id="lab3" name="lab[]" value="forms">
+            <label for="lab3">Forms &amp; Validation</label><br>
+
+            <!-- Form Extension: Select dropdown  -->
+            <label for="section_group">Section/Group:</label><br>
+            <select id="section_group" name="section_group">
+                <option value="">-- Select Section --</option>
+                <option value="Sec1">Section 1</option>
+                <option value="Sec2">Section 2</option>
+                <option value="Sec3">Section 3</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Semantic HTML -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        <article>
+            <h3>Ahmad Faisal</h3>
+            <p>The feedback system structure is now much cleaner and easier to navigate.</p>
+        </article>
+        <article>
+            <h3>Siti Aishah</h3>
+            <p>Great improvement on fixing the radio buttons and form inputs validation!</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+</body>
+</html>

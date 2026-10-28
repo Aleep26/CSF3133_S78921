@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natinal Hackathon 2026</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>National Hackathon 2026 </h1>
+        <p>Join us for an exciting day of coding and innovation</p>
+    </header>
+
+    <nav>
+        <a href="#about">About The Event</a>
+        <a href="#schedule">Event Schedule</a>
+        <a href="#registration">Registration</a>
+    </nav>
+
+    <hr>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <article>
+            <h3>Special Keynote Speaker: Dr. Jane Doe</h3>
+            <p>Learn from an industry expert as they share insights on the future of software development, team collaboration, and groundbreaking technology trends.</p>
+        </article>
+
+        <article>
+            <h3>Main Activity: Idea Generation</h3>
+            <p>Brainstorm and form teams to tackle challenging real-world problems. Mentors will be on-site to help guide your concepts from the ground up.</p>
+        </article>
+    </section>
+
+    <hr>
+
+    <!-- EVENT SCHEDULE TABLE -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1 -->
+                <tr>
+                    <td>08:00 AM - 09:00 AM</td>
+                    <td>Registration</td>
+                    <td rowspan="2">Main Hall</td> <!-- rowspan used for consecutive sessions in the same venue -->
+                    <td>Registration Team</td>
+                </tr>
+                <!-- Row 2 -->
+                <tr>
+                    <td>09:00 AM - 10:00 AM</td>
+                    <td>Opening Ceremony &amp; Briefing</td>
+                    <!-- Venue rowspan from above row covers this cell -->
+                    <td>Event Chair</td>
+                </tr>
+                <!-- Row 3 -->
+                <tr>
+                    <td>10:00 AM - 12:30 PM</td>
+                    <td>Brainstorming &amp; Team Matching</td>
+                    <td>Workshop Room B</td>
+                    <td>Mentors</td>
+                </tr>
+                <!-- Row 4 -->
+                <tr>
+                    <td>12:30 PM - 01:30 PM</td>
+                    <td colspan="3">Lunch Break</td> <!-- colspan spans across Activity, Venue, and Person in Charge -->
+                </tr>
+                <!-- Row 5 -->
+                <tr>
+                    <td>01:30 PM - 05:00 PM</td>
+                    <td>Hacking Session Begins</td>
+                    <td rowspan="2">Lab 3 &amp; Lab 4</td> <!-- rowspan used again for consecutive sessions in the same venue -->
+                    <td>Technical Staff</td>
+                </tr>
+                <!-- Row 6 -->
+                <tr>
+                    <td>05:00 PM - 06:00 PM</td>
+                    <td>Mid-Way Mentorship Check-in</td>
+                    <!-- Venue rowspan from above row covers this cell -->
+                    <td>Mentors</td>
+                </tr>
+                <!-- Row 7 -->
+                <tr>
+                    <td>06:00 PM - 08:00 PM</td>
+                    <td>Final Pitching &amp; Closing</td>
+                    <td>Main Auditorium</td>
+                    <td>Judges</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- REGISTRATION FORM -->
+    <section id="registration">
+        <h2>Registration Form</h2>
+        <form action="register.html" method="post">
+
+            <!-- Text inputs  -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Radio buttons for programming experience -->
+             <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year_of_study" value="1" required>
+                <label for="year1">1st Year </label>
+
+                <input type="radio" id="year2" name="year_of_study" value="2" required>
+                <label for="year2">2nd Year </label>
+
+                <input type="radio" id="year3" name="year_of_study" value="3" required>
+                <label for="year3">3rd Year </label>
+
+                <input type="radio" id="year4" name="year_of_study" value="4" required>
+                <label for="year4">4th Year </label>
+            </p>
+
+            <!-- Checkboxes -->
+            <p>
+                <label>Sessions you want to join:</label><br>
+                <input type="checkbox" id ="session1" name="sessions[]" value="morning_briefing">
+                <label for="session1" >Morning Briefing </label><br>
+                
+                <input type="checkbox" id ="session2" name="sessions[]" value="hacking_session">
+                <label for="session2" >Hacking Session </label><br>
+
+                <input type="checkbox" id ="session3" name="sessions[]" value="mentoring">
+                <label for="session3">Mentorship Session / Check-in</label><br>
+
+                <input type="checkbox" id ="session4" name="sessions[]" value="final_pitching">
+                <label for="session4" >Final Pitching & Closing</label>
+            </p>
+
+              <!-- Drop down list -->
+            <p>
+                <label for="programme">Programme or Faculty:</label><br>
+                <select id="programme" name="programme" required>
+                    <option value="">-- Please select --</option>
+                    <option value="software_engineering">Software Engineering</option>
+                    <option value="data_science">Data Science</option>
+                    <option value="computer_networks">Computer Networks &amp; Security</option>
+                    <option value="artificial_intelligence">Artificial Intelligence</option>
+                </select>
+            </p>
+
+            <p>
+                <button type="submit">Submit Registration</button>
+            </p>
+        </form>
+    </section>
+
+    <hr>
+    <!--FOOTER -->
+    <footer>
+        <p>Organised by the CS Faculty Committee &copy; 2026. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
