@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Terengganu</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .seats-label {
+      font-weight: bold;
+      color: #0b5563;
+    }
+
+    #footer-note {
+      font-size: 0.85em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Visit Pulau Redang</h1>
+    <p class="tagline">Crystal clear water and coral reefs off the coast of Terengganu.</p>
+  </header>
+
+  <!-- Navigation Bar-->
+  <nav>
+    <ul>
+      <li><a href="#destination">Destination</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#trip">Trip</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Section 1: Destination Section-->
+    <section id="destination">
+      <h2>Destination</h2>
+
+      <!-- Article 1: Pasir Panjang beach -->
+      <article class="card">
+        <h3>Pasir Panjang Beach</h3>
+        <p>Soft white sand and calm, clear water, perfect for swimming and relaxing.</p>
+        <p class="price"><span class="old-price">RM 450</span> <span class="new-price">RM 329</span></p>
+      </article>
+ 
+      <!-- Article 2: Marine Park snorkelling -->
+      <article class="card">
+        <h3>Redang Marine Park Snorkelling</h3>
+        <p>Snorkel above coral reefs and colourful fish in a protected marine park.</p>
+        <p class="price"><span class="old-price">RM 180</span> <span class="new-price">RM 129</span></p>
+      </article>
+ 
+      <!-- Article 3: Turtle sanctuary -->
+      <article class="card">
+        <h3>Chagar Hutang Turtle Sanctuary</h3>
+        <p>Learn about sea turtle conservation and help protect the island&rsquo;s wildlife.</p>
+        <p class="price"><span class="old-price">RM 90</span> <span class="new-price">RM 59</span></p>
+      </article>
+ 
+    </section>
+ 
+    <!-- Section 2: Promotional video with caption -->
+    <section id="video">
+      <h2>Watch and Explore</h2>
+      <figure class="center">
+        <video width="480" height="270" controls>
+          <source src="redang.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="caption">Promotional video: discover Pulau Redang.</figcaption>
+      </figure>
+    </section>
+ 
+    <!-- Section 3: Trip interest form -->
+    <section id="trip">
+      <h2>Plan a Trip</h2>
+ 
+      <!-- Meter: how many trip seats are filled -->
+      <p>
+        <label for="seats" class="seats-label">Redang trip seats filled (28 of 40):</label>
+        <meter id="seats" min="0" max="40" value="28">28 of 40</meter>
+      </p>
+      <form class="trip-form" action="#" method="post">
+        <!-- Name and e-mail -->
+        <p>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+          <label for="email">E-mail:</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+ 
+        <!-- Traveller type: radio buttons -->
+        <fieldset>
+          <legend>Traveller type</legend>
+          <label><input type="radio" name="traveller" value="student" checked> Student</label>
+          <label><input type="radio" name="traveller" value="staff"> Staff</label>
+          <label><input type="radio" name="traveller" value="public"> Public</label>
+        </fieldset>
+ 
+        <!-- Interests: checkboxes -->
+        <fieldset>
+          <legend>Interests</legend>
+          <label><input type="checkbox" name="interest" value="islands"> Islands</label>
+          <label><input type="checkbox" name="interest" value="food"> Food</label>
+          <label><input type="checkbox" name="interest" value="culture"> Culture</label>
+          <label><input type="checkbox" name="interest" value="nature"> Nature</label>
+        </fieldset>
+ 
+        <p><button type="submit">Send my interest</button></p>
+      </form>
+    </section>
+  </main>
+ 
+  <!-- FOOTER: copyright and contact address -->
+  <footer>
+    <p id="footer-note">&copy; 2026 Terengganu Tourism Office</p>
+    <address class="center">
+      Contact: <a href="mailto:info@visitredang.example">info@visitredang.example</a>
+    </address>
+  </footer>
+ 
+</body>
+</html>
