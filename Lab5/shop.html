@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Bookstore</title>
+  
+  <!-- Google Fonts: Roboto and Merriweather -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+<!--
+Errors found in the given code (line numbers refer to the ORIGINAL given files):
+Error 1  (shop.html, Line 7):  rel="stylesheets" is invalid; it must be rel="stylesheet", so shop.css was never loaded.
+Error 2  (shop.html, Lines 10-12): <style> was placed inside <body>; internal CSS must be in <head> (moved into shop.css).
+Error 3  (shop.html, Line 18): style="color=#1B4F72;" uses "=" instead of ":"; correct syntax is color: #1B4F72;
+Error 4  (shop.html, Line 20): table id="product" does not match the CSS selector #products; id changed to "products".
+Error 5  (shop.css, Line 2):   font name misspelt 'Robotto'; must be 'Roboto'.
+Error 6  (shop.css, Line 4):   "no repeat" must be "no-repeat" (hyphen), so the image repeated.
+Error 7  (shop.css, Line 5):   property misspelt "bacground-position"; must be background-position.
+Error 8  (shop.css, Line 18):  display: inline ignores the padding of links; must be display: block.
+Error 9  (shop.css, Line 23):  selector li:a:hover is invalid; must be li a:hover.
+Error 10 (shop.css, Line 27):  border-collapse: collapsed is invalid; must be collapse (double borders).
+Error 11 (shop.css, Line 34):  tr:nth-child(2) colours only one row; must be tr:nth-child(even).
+Error 12 (shop.css, Line 37):  pseudo-class :hovered does not exist; must be :hover.
+Error 13 (shop.css, Line 45):  missing semicolon after #f1f1f1, which broke the following text-align declaration.
+Note: after moving the title into the header (Part 2, Step 5), the inline style was removed and the title is white text on
+the books header image, as Step 5 requires. The corrected syntax for Error 3 is color: #1B4F72;
+-->
+
+  <!-- Header with background image -->
+  <header>
+    <h1>Campus Bookstore</h1>
+    <p>Textbooks, stationery and more for every student.</p>
+  </header>
+
+  <!-- Horizontal Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main id="books">
+    <table id="products">
+      <tr>
+        <th>Item</th>
+        <th>Category</th>
+        <th>Price (RM)</th>
+      </tr>
+      <tr>
+        <td>Web Design Basics</td>
+        <td>Textbook</td>
+        <td>45.00</td>
+      </tr>
+      <tr>
+        <td>A4 Notebook</td>
+        <td>Stationery</td>
+        <td>6.50</td>
+      </tr>
+      <tr>
+        <td>USB Drive 32GB</td>
+        <td>Gadget</td>
+        <td>25.00</td>
+      </tr>
+      <tr>
+        <td>Highlighter Set</td>
+        <td>Stationery</td>
+        <td>9.90</td>
+      </tr>
+    </table>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>&copy; 2026 Campus Bookstore</p>
+  </footer>
+
+</body>
+</html>
