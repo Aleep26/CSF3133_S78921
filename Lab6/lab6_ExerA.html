@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rock, Paper, Scissors</title>
+  <!-- Link external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Rock, Paper, Scissors</h1>
+    <p>Enter your name, click Start Game, then choose Rock, Paper or Scissors.</p>
+  </header>
+
+  <!-- Player section -->
+  <section class="card">
+    <label for="playerName">Enter Your Name: </label>
+    <input type="text" id="playerName">
+    <button type="button" onclick="startGame()">Start Game</button>
+    <p id="Welcome"></p>
+  </section>
+
+  <!-- Game section -->
+  <section class="card">
+    <button type="button" onclick="playRound('rock')">Rock</button>
+    <button type="button" onclick="playRound('paper')">Paper</button>
+    <button type="button" onclick="playRound('scissors')">Scissors</button>
+    <div class="results">
+      <div>
+        <p>You</p>
+        <img id="playerImg" src="rock.png" alt="Player choice">
+      </div>
+      <strong>VS</strong>
+      <div>
+        <p>Computer</p>
+        <img id="computerImg" src="rock.png" alt="Computer choice">
+      </div>
+    </div>
+  </section>
+
+  <!-- Result section -->
+  <section class="card">
+    <p id="result"></p>
+    <p>Wins: <span id="winCount">0</span></p>
+    <p>Losses: <span id="lossCount">0</span></p>
+    <p>Draws: <span id="drawCount">0</span></p>
+  </section>
+
+  <!-- History section -->
+  <section class="card">
+    <h2>History</h2>
+    <table id="history">
+      <tr>
+        <th>Round</th>
+        <th>You</th>
+        <th>Computer</th>
+        <th>Result</th>
+      </tr>
+    </table>
+    <button type="button" onclick="showSummary()">Show Summary</button>
+    <button type="button" onclick="resetGame()">Reset</button>
+    <p id="summary"></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p id="startTime"></p>
+    <p>&copy; 2026 Web Design</p>
+  </footer>
+
+  <!-- Link external JavaScript file -->
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Page basics */
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Header */
+header {
+  background: #1b4f72;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+}
+
+/* White card sections */
+.card {
+  background: white;
+  padding: 12px 16px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
+
+/* Buttons with hover effect */
+button {
+  padding: 8px 16px;
+  background: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+button:hover {
+  background: #1b4f72;
+}
+
+/* You vs Computer side by side and centered */
+.results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Images with fixed size */
+img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Result and summary message */
+#result {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#summary {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* History table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 10px;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 6px;
+  text-align: center;
+}
+
+th {
+  background: #1b4f72;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 12px;
+}
