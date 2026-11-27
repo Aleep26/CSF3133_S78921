@@ -1,96 +1,82 @@
-/* Page basics */
+/* ===== Page & Heading ===== */
 body {
   font-family: Arial, sans-serif;
-  background: #f2f4f7;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 10px;
+  background-color: #f2f4f7;
+  color: #222222;
+  margin: 24px;
+  font-size: 15px;
 }
 
-/* Header */
-header {
-  background: #1b4f72;
-  color: white;
-  padding: 12px 20px;
+h2 {
+  color: #1b4f72;
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+/* ===== Form Card & Inputs ===== */
+form {
+  background-color: #ffffff;
+  width: 360px;
+  padding: 16px;
   border-radius: 8px;
+  line-height: 2.1;
 }
 
-header h1 {
-  margin: 0 0 4px;
+input {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 15px;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-/* White card sections */
-.card {
-  background: white;
-  padding: 12px 16px;
-  margin-top: 12px;
-  border-radius: 8px;
-}
-
-/* Buttons with hover effect */
+/* ===== Buttons ===== */
 button {
   padding: 8px 16px;
-  background: #2980b9;
-  color: white;
+  margin-top: 8px;
+  margin-right: 6px;
+  font-size: 14px;
+  background-color: #2980b9;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 4px;
 }
 
 button:hover {
-  background: #1b4f72;
+  background-color: #1b4f72;
 }
 
-/* You vs Computer side by side and centered */
-.results {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  text-align: center;
-  margin-top: 12px;
-}
-
-/* Images with fixed size */
-img {
-  width: 120px;
-  height: 120px;
-}
-
-/* Result and summary message */
+/* ===== Result & Timestamp ===== */
 #result {
-  font-size: 1.3em;
+  margin: 10px 0 4px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-#summary {
+#checkedOn {
+  margin: 4px 0 12px;
+  font-size: 14px;
   font-weight: bold;
-  margin-top: 8px;
 }
 
-/* History table */
+/* ===== Grade Table ===== */
 table {
-  width: 100%;
   border-collapse: collapse;
-  margin: 8px 0 10px;
+  margin-top: 12px;
+  background-color: #ffffff;
+  font-size: 15px;
 }
 
-th, td {
-  border: 1px solid #999;
-  padding: 6px;
+th,
+td {
+  border: 1px solid #cccccc;
+  padding: 8px 24px;
   text-align: center;
 }
 
 th {
-  background: #1b4f72;
-  color: white;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  color: #666;
-  font-size: 0.9em;
-  margin-top: 12px;
+  background-color: #1b4f72;
+  color: #ffffff;
 }
